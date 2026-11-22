@@ -7,7 +7,7 @@
 ### 20 秒宣传短片 / 20s Launch Film
 [![TabEbb 20s Launch Film](store-assets/promo-cover.png)](https://github.com/yizhang-dream/tabebb/releases/download/v1.2.0/tabebb-launch-1080p30.mp4)
 
-> 点击上方封面观看 / 下载 20 秒动态漫画宣传片（[1080p30 轻量版](https://github.com/yizhang-dream/tabebb/releases/download/v1.2.0/tabebb-launch-1080p30.mp4) · [v1.2.0 Release 发布页](https://github.com/yizhang-dream/tabebb/releases/tag/v1.2.0)），原生 HTML-in-Canvas + WebGL 2 逐帧渲染。
+> 点击上方封面观看 / 下载 20 秒动态漫画宣传片（[4K60 终版母带](https://github.com/yizhang-dream/tabebb/releases/download/v1.2.0/tabebb-launch-4k60.mp4) · [1080p30 轻量版](https://github.com/yizhang-dream/tabebb/releases/download/v1.2.0/tabebb-launch-1080p30.mp4) · [v1.2.0 Release 发布页](https://github.com/yizhang-dream/tabebb/releases/tag/v1.2.0)），原生 HTML-in-Canvas + WebGL 2 逐帧渲染。
 
 <p align="center">
   <img src="store-assets/screenshot-1-popup.png" alt="TabEbb Popup & Auto-Archive" width="88%" />
