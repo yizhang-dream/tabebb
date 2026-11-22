@@ -1,0 +1,8 @@
+{
+  "extName": {
+    "message": "TabEbb — Auto-Archive Stale Tabs"
+  },
+  "extDesc": {
+    "message": "Keep recent session tabs on restart; auto-close and bookmark-archive 3+ day stale tabs by filtering fake restore reloads."
+  }
+}

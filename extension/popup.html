@@ -1,0 +1,84 @@
+﻿<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TabEbb · 潮退标签</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header class="header">
+    <div>
+      <h1>TabEbb · 潮退标签</h1>
+      <p class="subtitle">保留近期页面恢复，超时未访问自动关并归档</p>
+    </div>
+    <label class="switch" title="启用/暂停自动清理">
+      <input type="checkbox" id="enabledToggle">
+      <span class="slider"></span>
+    </label>
+  </header>
+
+  <section class="stats-grid">
+    <div class="stat-card">
+      <div class="stat-value" id="totalTabs">-</div>
+      <div class="stat-label">当前打开</div>
+    </div>
+    <div class="stat-card accent">
+      <div class="stat-value" id="expiredCount">-</div>
+      <div class="stat-label">已超期可清理</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-value" id="totalClosed">-</div>
+      <div class="stat-label">累计已清理</div>
+    </div>
+  </section>
+
+  <section class="actions">
+    <button id="reapNowBtn" class="btn primary">立即清理超期标签</button>
+    <button id="refreshBtn" class="btn secondary">刷新</button>
+  </section>
+  <div id="statusMsg" class="status-msg" role="status"></div>
+
+  <section class="panel">
+    <div class="panel-title">规则设置</div>
+    <div class="row">
+      <label for="ttlDaysInput">未访问自动关闭阈值（天）</label>
+      <input type="number" id="ttlDaysInput" min="0.5" max="90" step="0.5">
+    </div>
+    <div class="checks">
+      <label><input type="checkbox" id="protectPinned"> 保护固定标签页</label>
+      <label><input type="checkbox" id="protectAudible"> 保护正在发声标签页</label>
+      <label><input type="checkbox" id="archiveBookmarks"> 关闭前写入书签夹归档</label>
+    </div>
+    <div class="field">
+      <label for="whitelistInput">域名白名单（每行一个，永久不自动关）</label>
+      <textarea id="whitelistInput" rows="2" placeholder="例如：&#10;localhost&#10;mail.google.com"></textarea>
+    </div>
+    <button id="saveSettingsBtn" class="btn secondary full">保存设置</button>
+  </section>
+
+  <section class="panel">
+    <div class="panel-header">
+      <span class="panel-title">待清理超期标签</span>
+      <span class="hint" id="lastRunHint"></span>
+    </div>
+    <ul id="expiredList" class="tab-list"></ul>
+  </section>
+
+  <details class="panel">
+    <summary class="panel-title summary-toggle">查看已保留标签闲置排行（按最老排序）</summary>
+    <ul id="keptList" class="tab-list"></ul>
+  </details>
+
+  <section class="panel">
+    <div class="panel-header">
+      <span class="panel-title">最近已自动归档/关闭</span>
+      <button id="clearHistoryBtn" class="link-btn">清空记录</button>
+    </div>
+    <ul id="historyList" class="tab-list"></ul>
+  </section>
+
+  <script type="module" src="popup.js"></script>
+</body>
+</html>
+
